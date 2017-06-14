@@ -1,0 +1,33 @@
+Description: Remove google custom engine queries script
+ Remove javascript for the custom google engine queries, in the header
+ of each html documentation page, to avoid potential privacy breach.
+Author: Gennaro Oliva <oliva.g@na.icar.cnr.it>
+Origin: other
+Forwarded: no
+Last-Update: 2016-09-29
+
+--- slurm-llnl-16.05.5.orig/doc/html/header.txt
++++ slurm-llnl-16.05.5/doc/html/header.txt
+@@ -14,7 +14,6 @@
+ 	<link rel="stylesheet" type="text/css" href="slurm.css" />
+ 
+ 	<script src="jquery.min.js"></script>
+-	<script src="https://www.google.com/jsapi" type="text/javascript"></script>
+ 	<script type="text/javascript">
+ 	jQuery(document).ready(function() {
+ 		jQuery('.menu-trigger').bind('click touchstart', function() {
+@@ -24,14 +23,6 @@
+ 			return false;
+ 		});
+ 	});
+-
+-	google.load('search', '1', {language : 'en', style : google.loader.themes.V2_DEFAULT});
+-	google.setOnLoadCallback(function() {
+-	    var customSearchOptions = {};  var customSearchControl = new google.search.CustomSearchControl(
+-	      '011890816164765777536:jvrtxrd3f0w', customSearchOptions);
+-	    customSearchControl.setResultSetSize(google.search.Search.SMALL_RESULTSET);
+-	    customSearchControl.draw('cse');
+-	}, true);
+ 	</script>
+ </head>
+ 
