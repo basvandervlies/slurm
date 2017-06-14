@@ -95,6 +95,9 @@ override_dh_auto_install:
 	mv debian/tmp-emulator/usr/bin/scontrol debian/tmp-emulator/usr/bin/scontrol-emulator
 	mv debian/tmp-emulator/usr/bin/sstat	debian/tmp-emulator/usr/bin/sstat-emulator
 
+	## This man page is forgotten to  be copied to debian dir BvdV
+	cp doc/man/man1/srun_cr.1 debian/tmp/usr/share/man/man1/
+
 override_dh_strip:
 	dh_strip -plibslurm30 --dbg-package=libslurm30-dbg
 	dh_strip -plibslurmdb30 --dbg-package=libslurmdb30-dbg
