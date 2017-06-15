@@ -1,3 +1,9 @@
+slurm-llnl (17.02.5-1) UNRELEASED; urgency=medium
+
+  * New upstream release 15 Jun 2017
+
+ -- Bas van der Vlies <bas.vandervlies@surfsara.nl>  Thu, 15 Jun 2017 10:00:41 +0200
+
 slurm-llnl (17.02.4-1) UNRELEASED; urgency=medium
 
   * New upstream release
